@@ -12,6 +12,14 @@ const LinkStyle = {
 	cursor: "pointer"
 };
 
+const AboutLinkStyle = {
+	color: "var(--secondary)",
+	fontSize:"1.24rem", 
+	fontWeight:400, 
+	lineHeight: "15px",
+	cursor: "pointer"
+};
+
 function Main() {
 	return (
 		<div className="bcard__body">
@@ -32,8 +40,15 @@ Linkedin</button></a>
 
 			<div className="bcard__text-wrapper">
 				<div className="bcard__about">
-					<h3 className="bcard__heading">About</h3>
-					<p className="bcard__text">AYZÖFL'02 | PA'08 | DCI | USTECH Dreams are the shadows of the Reality. #whoami <span role="img" aria-label="hand-signs">👉🏼</span> #webdeveloper #webdesigner #blockchaindeveloper #freelancer #selflearner</p>
+					<h3 className="bcard__heading">About Me</h3>
+					<p className="bcard__text">
+						<a style= { AboutLinkStyle } href="https://antalyafenlisesi.meb.k12.tr/" target="__blank">AYZÖFL'02 |</a>
+						<a style= { AboutLinkStyle } href="#"> PA'08 |</a>
+						<a style= { AboutLinkStyle } href="https://digitalcareerinstitute.org/" target="__blank"> DCI |</a> 
+						<a style= { AboutLinkStyle } href="https://ustechacademy.org/" target="__blank"> USTECH</a>
+					</p>  
+					<p className="bcard__text">"Dreams are the shadows of the Reality."</p>
+					<p className="bcard__text">#whoami <span role="img" aria-label="hand-signs">👉🏼</span> #webdeveloper #webdesigner #blockchaindeveloper #freelancer #selflearner</p>
 				</div>
 				<div className="bcard__interests">
 					<h3 className="bcard__heading">Interests</h3>
