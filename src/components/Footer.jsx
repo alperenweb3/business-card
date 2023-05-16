@@ -8,7 +8,6 @@ function Footer() {
 	return (
 		<div className="bcard__footer">
 			<a className="bcard__footer-icon" href="https://twitter.com/alperenweb3" target="__blank"><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
-			<a className="bcard__footer-icon" href="https://facebook.com/thechiefalone" target="__blank"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a>
 			<a className="bcard__footer-icon" href="https://instagram.com/alperenweb3" target="__blank"><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
 			<a className="bcard__footer-icon" href="https://github.com/alperenweb3" target="__blank"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
 		</div>
