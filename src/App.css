@@ -52,3 +52,10 @@ a:not(.default):visited {
 .bcard{
   width: var(--bcard-width);
 }
+
+@media (max-height: 750px) {
+  .main {
+    /* do something.. */
+    height: auto;
+  }
+}
