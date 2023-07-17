@@ -51,6 +51,7 @@ a:not(.default):visited {
 
 .bcard{
   width: var(--bcard-width);
+  margin: 1rem;
 }
 
 @media (max-height: 750px) {
