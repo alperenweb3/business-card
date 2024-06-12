@@ -26,9 +26,9 @@ function Main() {
 
 			<div className="bcard__heading-wrapper">
 				<h1 className="bcard__name">Alperen Özkan</h1>
-				<h2 className="bcard__title">Full Stack Web & Blockchain Developer</h2>
+				<h2 className="bcard__title">Full Stack Developer</h2>
 				<div className="bcard__website">
-					<a style= { LinkStyle } href="https://ustechacademy.org" target="__blank">ustechacademy.org</a>
+					<a style= { LinkStyle } href="https://chartworld.com" target="__blank">ChartWorld Group</a>
 				</div>
 			</div>
 
@@ -45,7 +45,7 @@ Linkedin</button></a>
 						<a style= { AboutLinkStyle } href="https://antalyafenlisesi.meb.k12.tr/" target="__blank">AYZÖFL'02 |</a>
 						<a style= { AboutLinkStyle } href="#"> PA'08 |</a>
 						<a style= { AboutLinkStyle } href="https://digitalcareerinstitute.org/" target="__blank"> DCI |</a> 
-						<a style= { AboutLinkStyle } href="https://ustechacademy.org/" target="__blank"> USTECH</a>
+						<a style= { AboutLinkStyle } href="https://codeworks.me/" target="__blank"> CodeWorks</a>
 					</p>  
 					<p className="bcard__text">"Dreams are the shadows of the Reality."</p>
 					<p className="bcard__text">#whoami <span role="img" aria-label="hand-signs">👉🏼</span> #webdeveloper #reactJS #blockchaindeveloper #freelancer #selflearner</p>
