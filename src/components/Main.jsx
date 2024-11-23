@@ -26,9 +26,9 @@ function Main() {
 
 			<div className="bcard__heading-wrapper">
 				<h1 className="bcard__name">Alperen Özkan</h1>
-				<h2 className="bcard__title">Full Stack Developer</h2>
+				<h2 className="bcard__title">Software Developer</h2>
 				<div className="bcard__website">
-					<a style= { LinkStyle } href="https://chartworld.com" target="__blank">ChartWorld Group</a>
+					<a style= { LinkStyle } href="https://chartworld.com" target="__blank">7Cs (SevenCs) GmbH</a>
 				</div>
 			</div>
 
@@ -48,11 +48,11 @@ Linkedin</button></a>
 						<a style= { AboutLinkStyle } href="https://codeworks.me/" target="__blank"> CodeWorks</a>
 					</p>  
 					<p className="bcard__text">"Dreams are the shadows of the Reality."</p>
-					<p className="bcard__text">#whoami <span role="img" aria-label="hand-signs">👉🏼</span> #webdeveloper #reactJS #blockchaindeveloper #freelancer #selflearner</p>
+					<p className="bcard__text">#whoami <span role="img" aria-label="hand-signs">👉🏼</span> #developer #cybercrimeinvestigator #blockchaindevoper #freelancer #selflearner</p>
 				</div>
 				<div className="bcard__interests">
 					<h3 className="bcard__heading">Interests</h3>
-					<p className="bcard__text">Web3, ReactJS, Blockchain, Playing Ney, Travel</p>
+					<p className="bcard__text">Cyber Security, ReactJS, Blockchain, Father, Travel, Ney Music</p>
 				</div>
 			</div>	
 		</div>
