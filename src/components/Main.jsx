@@ -33,7 +33,7 @@ function Main() {
 			</div>
 
 			<div className="bcard__btn-wrapper">
-				<a href="mailto:alperenozkan.official@gmail.com" target="__blank"><button className="bcard__btn bcard__btn--email"><FontAwesomeIcon className="bcard__btn-icon" icon={faEnvelope}></FontAwesomeIcon>Email</button></a>
+				<a href="mailto:alperen@oezkan.co" target="__blank"><button className="bcard__btn bcard__btn--email"><FontAwesomeIcon className="bcard__btn-icon" icon={faEnvelope}></FontAwesomeIcon>Email</button></a>
 				<a href="https://linkedin.com/in/alperenozkan" target="__blank"><button className="bcard__btn bcard__btn--linkedin"><FontAwesomeIcon className="bcard__btn-icon" icon={faLinkedin}></FontAwesomeIcon>
 Linkedin</button></a>
 			</div>
@@ -52,7 +52,7 @@ Linkedin</button></a>
 				</div>
 				<div className="bcard__interests">
 					<h3 className="bcard__heading">Interests</h3>
-					<p className="bcard__text">Cyber Security, ReactJS, Blockchain, Father, Travel, Ney Music</p>
+					<p className="bcard__text">Cyber Security, ReactJS, Blockchain, Web3, Father, Travel, Ney, Music</p>
 				</div>
 			</div>	
 		</div>
