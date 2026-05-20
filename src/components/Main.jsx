@@ -43,7 +43,7 @@ Linkedin</button></a>
 					<h3 className="bcard__heading">About Me</h3>
 					<p className="bcard__text">
 						<a style= { AboutLinkStyle } href="https://antalyafenlisesi.meb.k12.tr/" target="__blank">AYZÖFL'02 |</a>
-						<a style= { AboutLinkStyle } href="#"> PA'08 |</a>
+						<a style= { AboutLinkStyle } href="/"> PA'08 |</a>
 						<a style= { AboutLinkStyle } href="https://digitalcareerinstitute.org/" target="__blank"> DCI |</a> 
 						<a style= { AboutLinkStyle } href="https://codeworks.me/" target="__blank"> CodeWorks</a>
 					</p>  
@@ -52,7 +52,7 @@ Linkedin</button></a>
 				</div>
 				<div className="bcard__interests">
 					<h3 className="bcard__heading">Interests</h3>
-					<p className="bcard__text">Cyber Security, ReactJS, Blockchain, Web3, Father, Travel, Ney, Music</p>
+					<p className="bcard__text">Web Dev, Blockchain, Short Trips, Mediterranean Foods</p>
 				</div>
 			</div>	
 		</div>
