@@ -43,7 +43,7 @@ Linkedin</button></a>
 					<h3 className="bcard__heading">About Me</h3>
 					<p className="bcard__text">
 						<a style= { AboutLinkStyle } href="https://antalyafenlisesi.meb.k12.tr/" target="__blank">AYZÖFL'02 |</a>
-						<a style= { AboutLinkStyle } href="#"> PA'08 |</a>
+						<a style= { AboutLinkStyle } href="https://#"> PA'08 |</a>
 						<a style= { AboutLinkStyle } href="https://digitalcareerinstitute.org/" target="__blank"> DCI |</a> 
 						<a style= { AboutLinkStyle } href="https://codeworks.me/" target="__blank"> CodeWorks</a>
 					</p>  
