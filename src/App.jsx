@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import portrait from "./images/alperenweb3_profile.jpg";
 
@@ -10,6 +10,33 @@ const socialLinks = [
   { label: "Instagram", href: "https://instagram.com/alperenweb3" },
   { label: "X / Twitter", href: "https://twitter.com/alperenweb3" },
 ];
+
+const metadata = {
+  en: {
+    title: "Alperen Özkan — Software Developer",
+    description: "Software developer at Teledyne SevenCs, investigator and lifelong learner based in Hamburg.",
+    socialDescription: "I turn complex problems into useful, human things for the web.",
+    locale: "en_US",
+    imageAlt: "Alperen Özkan — I make ideas click.",
+    url: "https://alperen.co/",
+  },
+  tr: {
+    title: "Alperen Özkan — Yazılım Geliştirici",
+    description: "Hamburg’da yaşayan Teledyne SevenCs yazılım geliştiricisi, araştırmacı ve ömür boyu öğrenci.",
+    socialDescription: "Karmaşık problemleri web için faydalı ve insani şeylere dönüştürüyorum.",
+    locale: "tr_TR",
+    imageAlt: "Alperen Özkan — Fikirleri hayata geçiririm.",
+    url: "https://alperen.co/tr/",
+  },
+  de: {
+    title: "Alperen Özkan — Softwareentwickler",
+    description: "Softwareentwickler bei Teledyne SevenCs, Ermittler und lebenslanger Lerner aus Hamburg.",
+    socialDescription: "Ich verwandle komplexe Probleme in nützliche, menschliche Lösungen für das Web.",
+    locale: "de_DE",
+    imageAlt: "Alperen Özkan — Ich bringe Ideen zum Laufen.",
+    url: "https://alperen.co/de/",
+  },
+};
 
 const copy = {
   en: {
@@ -51,7 +78,7 @@ const copy = {
     hello: "Merhaba de",
     role: "Teledyne SevenCs’te Yazılım Geliştirici",
     location: "Hamburg, Almanya",
-    title: <>Fikirleri<span>çalıştırırım<span className="dot">.</span></span></>,
+    title: <>Fikirleri<span>hayata geçiririm<span className="dot">.</span></span></>,
     portrait: "Merhaba, ben Alperen",
     curious: <>’84’TEN BERİ<br />MERAKLI</>,
     intro: "Karmaşık problemleri web için faydalı ve insani şeylere dönüştüren geliştirici, araştırmacı ve ömür boyu öğrenci.",
@@ -117,28 +144,34 @@ const copy = {
 };
 
 function App() {
-  const [language, setLanguage] = useState(() => {
-    const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
-    return requestedLanguage === "tr" || requestedLanguage === "de" ? requestedLanguage : "en";
-  });
+  const pathLanguage = window.location.pathname.split("/").filter(Boolean)[0];
+  const queryLanguage = new URLSearchParams(window.location.search).get("lang");
+  const language = ["tr", "de"].includes(pathLanguage)
+    ? pathLanguage
+    : (["tr", "de"].includes(queryLanguage) ? queryLanguage : "en");
   const t = copy[language];
 
   const switchLanguage = (nextLanguage) => {
-    setLanguage(nextLanguage);
-    const url = new URL(window.location.href);
-    if (nextLanguage !== "en") url.searchParams.set("lang", nextLanguage);
-    else url.searchParams.delete("lang");
-    window.history.replaceState({}, "", url);
+    window.location.assign(nextLanguage === "en" ? "/" : `/${nextLanguage}/`);
   };
 
   useEffect(() => {
-    document.documentElement.lang = language;
-    const titles = {
-      en: "Alperen Özkan — Software Developer",
-      tr: "Alperen Özkan — Yazılım Geliştirici",
-      de: "Alperen Özkan — Softwareentwickler",
+    const meta = metadata[language];
+    const setMeta = (selector, content) => {
+      document.querySelector(selector)?.setAttribute("content", content);
     };
-    document.title = titles[language];
+
+    document.documentElement.lang = language;
+    document.title = meta.title;
+    setMeta('meta[name="description"]', meta.description);
+    setMeta('meta[property="og:title"]', meta.title);
+    setMeta('meta[property="og:description"]', meta.socialDescription);
+    setMeta('meta[property="og:locale"]', meta.locale);
+    setMeta('meta[property="og:url"]', meta.url);
+    setMeta('meta[property="og:image:alt"]', meta.imageAlt);
+    setMeta('meta[name="twitter:title"]', meta.title);
+    setMeta('meta[name="twitter:description"]', meta.socialDescription);
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", meta.url);
   }, [language]);
 
   return (
